@@ -1,0 +1,63 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="employee.app.controller.EmployeeDetail">
+    <Page title="Employee Detail">
+        <content>
+            <!-- VBox to arrange content vertically -->
+            <VBox class="sapUiResponsiveMargin">
+                
+                <!-- Employee ID Section -->
+                <HBox class="sapUiSmallMarginBottom">
+                    <Label text="Employee Id" labelFor="empIdText" width="150px"/>
+                    <Text id="empIdText" text="{/selectedEmployee/empId}" />
+                </HBox>
+
+                <!-- Name Section -->
+                <HBox class="sapUiSmallMarginBottom">
+                    <Label text="Name" labelFor="nameText" width="150px"/>
+                    <Text id="nameText" text="{/selectedEmployee/name}" />
+                </HBox>
+
+                <!-- Age Section -->
+                <HBox class="sapUiSmallMarginBottom">
+                    <Label text="Age" labelFor="ageText" width="150px"/>
+                    <Text id="ageText" text="{/selectedEmployee/age}" />
+                </HBox>
+
+                <!-- Date of Birth Section -->
+                <HBox class="sapUiSmallMarginBottom">
+                    <Label text="Date of Birth" labelFor="dobText" width="150px"/>
+                    <Text id="dobText" text="{/selectedEmployee/dob}" />
+                </HBox>
+
+                <!-- Address Section -->
+                <HBox class="sapUiSmallMarginBottom">
+                    <Label text="Address" labelFor="addressText" width="150px"/>
+                    <Text id="addressText" text="{/selectedEmployee/address}" />
+                </HBox>
+
+                <!-- City Section -->
+                <HBox class="sapUiSmallMarginBottom">
+                    <Label text="City" labelFor="cityText" width="150px"/>
+                    <Text id="cityText" text="{/selectedEmployee/city}" />
+                </HBox>
+
+                <!-- Country Section -->
+                <HBox class="sapUiSmallMarginBottom">
+                    <Label text="Country" labelFor="countryText" width="150px"/>
+                    <Text id="countryText" text="{/selectedEmployee/country}" />
+                </HBox>
+
+                <!-- Temperature Section -->
+                <HBox class="sapUiSmallMarginBottom">
+                    <Label text="Temperature" labelFor="temperatureText" width="150px"/>
+                    <Text id="temperatureText" text="{/selectedEmployee/temperature}" />
+                </HBox>
+
+            </VBox>
+
+            <!-- Back to Overview Button, centered with margin -->
+            <VBox class="sapUiSmallMarginTop" justifyContent="Center" alignItems="Center">
+                <Button text="Back to Overview" press=".onNavBack" />
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>

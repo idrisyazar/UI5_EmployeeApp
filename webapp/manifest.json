@@ -1,0 +1,75 @@
+{
+    "_version": "1.12.0",
+    "sap.app": {
+      "id": "employee.app",
+      "type": "application",
+      "applicationVersion": {
+        "version": "1.0.0"
+      },
+      "title": "Employee App",
+      "description": "An app to manage employees."
+    },
+    "sap.ui": {
+      "technology": "UI5",
+      "deviceTypes": {
+        "desktop": true,
+        "tablet": true,
+        "phone": true
+      }
+    },
+    "sap.ui5": {
+      "rootView": {
+        "viewName": "employee.app.view.EmployeeList",
+        "type": "XML",
+        "async": true
+      },
+      "contentDensities": {
+        "compact": true,
+        "cozy": true
+    },
+      "dependencies": {
+        "minUI5Version": "1.60",
+        "libs": {
+          "sap.m": {}
+        }
+      },
+      "models": {
+        "": {
+          "type": "sap.ui.model.json.JSONModel",
+          "uri": "model/localdata.json"  
+        }
+      },
+      "routing": {
+        "config": {
+          "routerClass": "sap.m.routing.Router",
+          "viewPath": "employee.app.view",
+          "controlId": "app",
+          "controlAggregation": "pages",
+          "async": true
+        },
+        "routes": [
+          {
+            "pattern": "",
+            "name": "list",
+            "target": "list"
+          },
+          {
+            "pattern": "detail",
+            "name": "detail",
+            "target": "detail"
+          }
+        ],
+        "targets": {
+          "list": {
+            "viewName": "EmployeeList",
+            "viewType": "XML"
+          },
+          "detail": {
+            "viewName": "EmployeeDetail",
+            "viewType": "XML"
+          }
+        }
+      }
+    }
+  }
+  

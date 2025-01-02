@@ -1,0 +1,12 @@
+{
+    "name": "ui5-employee-app",
+    "version": "1.0.0",
+    "description": "A simple UI5 application for managing employees",
+    "scripts": {
+        "start": "ui5 serve -o index.html",
+         "build": "ui5 build"
+    },
+    "devDependencies": {
+        "@ui5/cli": "^3.0.0"
+    }
+}

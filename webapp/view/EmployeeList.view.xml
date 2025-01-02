@@ -1,0 +1,89 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="employee.app.controller.EmployeeList">
+    <App id="app">
+        <Page title="Employee List">
+            <content>
+                <!-- Form to add new employee -->
+                <VBox class="sapUiResponsiveMargin">
+                    <!-- Name Input -->
+                    <HBox alignItems="Center" class="sapUiSmallMarginBottom">
+                        <Label text="Name" class="sapUiTinyMarginEnd" width="150px"/>
+                        <Input id="nameInput" value="{/newEmployee/name}" placeholder="Enter your name" width="100%"/>
+                    </HBox>
+
+                    <!-- Age Input -->
+                    <HBox alignItems="Center" class="sapUiSmallMarginBottom">
+                        <Label text="Age" class="sapUiTinyMarginEnd" width="150px"/>
+                        <Input id="ageInput" value="{/newEmployee/age}" placeholder="Enter your age" width="100%"/>
+                    </HBox>
+
+                    <!-- Date of Birth Input -->
+                    <HBox alignItems="Center" class="sapUiSmallMarginBottom">
+                        <Label text="Date of Birth" class="sapUiTinyMarginEnd" width="150px"/>
+                        <Input id="dobInput" value="{/newEmployee/dob}" placeholder="YYYY-MM-DD" width="100%"/>
+                    </HBox>
+
+                    <!-- Address Input -->
+                    <HBox alignItems="Center" class="sapUiSmallMarginBottom">
+                        <Label text="Address" class="sapUiTinyMarginEnd" width="150px"/>
+                        <Input id="addressInput" value="{/newEmployee/address}" placeholder="Enter your address" width="100%"/>
+                    </HBox>
+
+                    <!-- City Input -->
+                    <HBox alignItems="Center" class="sapUiSmallMarginBottom">
+                        <Label text="City" class="sapUiTinyMarginEnd" width="150px"/>
+                        <Input id="cityInput" value="{/newEmployee/city}" placeholder="Enter your city" width="100%"/>
+                    </HBox>
+
+                    <!-- Country Input -->
+                    <HBox alignItems="Center" class="sapUiSmallMarginBottom">
+                        <Label text="Country" class="sapUiTinyMarginEnd" width="150px"/>
+                        <Input id="countryInput" value="{/newEmployee/country}" placeholder="Enter your country" width="100%"/>
+                    </HBox>
+
+                    <!-- Temperature Input -->
+                    <HBox alignItems="Center" class="sapUiSmallMarginBottom">
+                        <Label text="Temperature" class="sapUiTinyMarginEnd" width="150px"/>
+                        <Input id="temperatureInput" value="{/newEmployee/temperature}" placeholder="Enter temperature" width="100%"/>
+                    </HBox>
+
+                    <!-- Add Employee Button -->
+             <HBox justifyContent="Center" class="sapUiSmallMarginTop">
+    <Button text="Add Employee" press=".onAddEmployee" type="Emphasized" width="auto" />
+</HBox>
+
+                </VBox>
+
+                <!-- Table displaying employee list -->
+                <VBox class="sapUiResponsiveMargin">
+                    <Table id="employeeTable" items="{/employees}" growing="true">
+                        <columns>
+                            <Column><Text text="Employee Id"/></Column>
+                            <Column><Text text="Name"/></Column>
+                            <Column><Text text="Age"/></Column>
+                            <Column><Text text="Date of Birth"/></Column>
+                            <Column><Text text="Address"/></Column>
+                            <Column><Text text="City"/></Column>
+                            <Column><Text text="Country"/></Column>
+                            <Column><Text text="Temperature"/></Column>
+                        </columns>
+                        <items>
+                            <ColumnListItem type="Active" press="onSelectEmployee">
+                                <cells>
+                                    <!-- Binding each field to the employee data -->
+                                    <Text text="{empId}"/>
+                                    <Text text="{name}"/>
+                                    <Text text="{age}"/>
+                                    <Text text="{dob}"/>
+                                    <Text text="{address}"/>
+                                    <Text text="{city}"/>
+                                    <Text text="{country}"/>
+                                    <Text text="{temperature}"/>
+                                </cells>
+                            </ColumnListItem>
+                        </items>
+                    </Table>
+                </VBox>
+            </content>
+        </Page>
+    </App>
+</mvc:View>

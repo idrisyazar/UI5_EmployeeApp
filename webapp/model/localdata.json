@@ -1,0 +1,134 @@
+{
+  "employees": [
+    {
+      "empId": 1,
+      "name": "Max Mustermann",
+      "age": 24,
+      "dob": "2000-01-01",
+      "address": "123 Max Street",
+      "city": "Ankara",
+      "country": null,
+      "temperature": null
+    },
+    {
+      "empId": 2,
+      "name": "Felix Friedrich",
+      "age": 23,
+      "dob": "2001-01-01",
+      "address": "123 Felix Street",
+      "city": "Lissabon",
+      "country": null,
+      "temperature": null
+    },
+    {
+      "empId": 3,
+      "name": "Tim Thomas",
+      "age": 24,
+      "dob": "2000-02-02",
+      "address": "123 Tim Street",
+      "city": "Madrid",
+      "country": null,
+      "temperature": null
+    },
+    {
+      "empId": 4,
+      "name": "Bernd Brot",
+      "age": 23,
+      "dob": "2001-02-02",
+      "address": "123 Bernd Street",
+      "city": "Wien",
+      "country": null,
+      "temperature": null
+    },
+    {
+      "empId": 5,
+      "name": "Armin Arlert",
+      "age": 24,
+      "dob": "2000-03-03",
+      "address": "123 Armin Street",
+      "city": "Bern",
+      "country": null,
+      "temperature": null
+    },
+    {
+      "empId": 6,
+      "name": "Markus Merl",
+      "age": 23,
+      "dob": "2001-04-04",
+      "address": "123 Markus Street",
+      "city": "Prag",
+      "country": null,
+      "temperature": null
+    },
+    {
+      "empId": 7,
+      "name": "Niklas Nutz",
+      "age": 24,
+      "dob": "2000-04-04",
+      "address": "123 Niklas Street",
+      "city": "Rom",
+      "country": null,
+      "temperature": null
+    },
+    {
+      "empId": 8,
+      "name": "Dennis Draht",
+      "age": 23,
+      "dob": "2001-05-05",
+      "address": "123 Dennis Street",
+      "city": "Berlin",
+      "country": null,
+      "temperature": null
+    },
+    {
+      "empId": 9,
+      "name": "Jonah Jon",
+      "age": 24,
+      "dob": "2000-05-05",
+      "address": "123 Jonah Street",
+      "city": "Dublin",
+      "country": null,
+      "temperature": null
+    },
+    {
+      "empId": 10,
+      "name": "Emil Erl",
+      "age": 23,
+      "dob": "2001-06-06",
+      "address": "123 Emil Street",
+      "city": "Paris",
+      "country": null,
+      "temperature": null
+    },
+    {
+      "empId": 11,
+      "name": "Kamil Kuntz",
+      "age": 24,
+      "dob": "2000-06-06",
+      "address": "123 Kamil Street",
+      "city": "London",
+      "country": null,
+      "temperature": null
+    },
+    {
+      "empId": 12,
+      "name": "Paul Pogba",
+      "age": 23,
+      "dob": "2001-07-07",
+      "address": "123 Paul Street",
+      "city": "Frankfurt",
+      "country": null,
+      "temperature": null
+    }
+  ],
+  "newEmployee": {
+    "empId": "",
+    "name": "",
+    "age": "",
+    "dob": "",
+    "address": "",
+    "city": "",
+    "country": "",
+    "temperature": ""
+  }
+}

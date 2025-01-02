@@ -1,0 +1,17 @@
+{
+    "configurations": [
+        
+      {
+        "name": "Run Employee App",
+        "type": "node",
+        "request": "launch",
+        "program": "${workspaceFolder}/node_modules/@ui5/cli/bin/ui5.cjs",
+        "args": [
+          "serve",
+          "--open",
+          "index.html"
+        ]
+      }
+    ]
+  }
+  
