@@ -1,61 +1,86 @@
-<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="employee.app.controller.EmployeeList">
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:tnt="sap.tnt" controllerName="employee.app.controller.EmployeeList">
     <App id="app">
-        <Page title="Employee List">
-            <content>
+        <Page>
+        <customHeader>
+                <tnt:ToolHeader class="">
+                    <Image src="images/logo.png" width="90px" height="50px" decorative="false" press=".onLogoPressed" tooltip="SAP Logo"/>
+                    <Title text="MyApp" wrapping="false" design="Bold"/>
+                    <ToolbarSpacer />
+                    <Avatar src="test-resources/sap/tnt/images/Woman_avatar_01.png" displaySize="XS" press=".onAvatarPressed" tooltip="Profile"/>
+                </tnt:ToolHeader>
+        </customHeader>
+        <IconTabHeader mode="Inline">
+		<items>
+			<IconTabFilter key="info" text="Info" />
+			<IconTabFilter key="attachments" text="Attachments" count="3" />
+			<IconTabFilter key="notes" text="Notes" count="12" />
+			<IconTabFilter key="people" text="People"/>
+		</items>
+	    </IconTabHeader>
+            <VBox class="sapUiResponsiveMargin">
                 <!-- Form to add new employee -->
-                <VBox class="sapUiResponsiveMargin">
+                <VBox class="customTableWrapper">
+                <!-- Header -->
+                <Text class="customTableHeader" text="Employee Form"/>
+                <VBox class="customTableBorder">
                     <!-- Name Input -->
                     <HBox alignItems="Center" class="sapUiSmallMarginBottom">
-                        <Label text="Name" class="sapUiTinyMarginEnd" width="150px"/>
+                        <Label text="Name" class="sapUiTinyMarginEnd" width="150px" design="Bold"/>
                         <Input id="nameInput" value="{/newEmployee/name}" placeholder="Enter your name" width="100%"/>
                     </HBox>
 
                     <!-- Age Input -->
                     <HBox alignItems="Center" class="sapUiSmallMarginBottom">
-                        <Label text="Age" class="sapUiTinyMarginEnd" width="150px"/>
+                        <Label text="Age" class="sapUiTinyMarginEnd" width="150px" design="Bold"/>
                         <Input id="ageInput" value="{/newEmployee/age}" placeholder="Enter your age" width="100%"/>
                     </HBox>
 
                     <!-- Date of Birth Input -->
                     <HBox alignItems="Center" class="sapUiSmallMarginBottom">
-                        <Label text="Date of Birth" class="sapUiTinyMarginEnd" width="150px"/>
+                        <Label text="Date of Birth" class="sapUiTinyMarginEnd" width="150px" design="Bold"/>
                         <Input id="dobInput" value="{/newEmployee/dob}" placeholder="YYYY-MM-DD" width="100%"/>
                     </HBox>
 
                     <!-- Address Input -->
                     <HBox alignItems="Center" class="sapUiSmallMarginBottom">
-                        <Label text="Address" class="sapUiTinyMarginEnd" width="150px"/>
+                        <Label text="Address" class="sapUiTinyMarginEnd" width="150px" design="Bold"/>
                         <Input id="addressInput" value="{/newEmployee/address}" placeholder="Enter your address" width="100%"/>
                     </HBox>
 
                     <!-- City Input -->
                     <HBox alignItems="Center" class="sapUiSmallMarginBottom">
-                        <Label text="City" class="sapUiTinyMarginEnd" width="150px"/>
+                        <Label text="City" class="sapUiTinyMarginEnd" width="150px" design="Bold"/>
                         <Input id="cityInput" value="{/newEmployee/city}" placeholder="Enter your city" width="100%"/>
                     </HBox>
 
                     <!-- Country Input -->
                     <HBox alignItems="Center" class="sapUiSmallMarginBottom">
-                        <Label text="Country" class="sapUiTinyMarginEnd" width="150px"/>
+                        <Label text="Country" class="sapUiTinyMarginEnd" width="150px" design="Bold"/>
                         <Input id="countryInput" value="{/newEmployee/country}" placeholder="Enter your country" width="100%"/>
                     </HBox>
 
                     <!-- Temperature Input -->
                     <HBox alignItems="Center" class="sapUiSmallMarginBottom">
-                        <Label text="Temperature" class="sapUiTinyMarginEnd" width="150px"/>
+                        <Label text="Temperature" class="sapUiTinyMarginEnd" width="150px" design="Bold"/>
                         <Input id="temperatureInput" value="{/newEmployee/temperature}" placeholder="Enter temperature" width="100%"/>
                     </HBox>
 
-                    <!-- Add Employee Button -->
-             <HBox justifyContent="Center" class="sapUiSmallMarginTop">
-    <Button text="Add Employee" press=".onAddEmployee" type="Emphasized" width="auto" />
-</HBox>
+                 <!-- Add Employee Button -->
+                <Button text="Add Employee" 
+                        press=".onAddEmployee" 
+                        class="sapUiMediumMarginTop"
+                        type="Emphasized" 
+                        width="337px"
+                        ariaHasPopup="Dialog" />  
+                </VBox> 
 
                 </VBox>
+             
 
                 <!-- Table displaying employee list -->
-                <VBox class="sapUiResponsiveMargin">
-                    <Table id="employeeTable" items="{/employees}" growing="true">
+                <VBox class="customTableWrapper">
+                    <Text class="customTableHeader" text="Employee List"/>
+                    <Table id="employeeTable" items="{/employees}" growing="true" class="customTableBorder">
                         <columns>
                             <Column><Text text="Employee Id"/></Column>
                             <Column><Text text="Name"/></Column>
@@ -83,7 +108,7 @@
                         </items>
                     </Table>
                 </VBox>
-            </content>
+            </VBox>
         </Page>
     </App>
 </mvc:View>

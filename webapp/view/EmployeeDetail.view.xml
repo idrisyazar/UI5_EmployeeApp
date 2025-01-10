@@ -1,9 +1,26 @@
-<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="employee.app.controller.EmployeeDetail">
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:tnt="sap.tnt" controllerName="employee.app.controller.EmployeeDetail">
     <Page title="Employee Detail">
+    <customHeader>
+                <tnt:ToolHeader class="">
+                    <Image src="images/logo.png" width="90px" height="50px" decorative="false" press=".onLogoPressed" tooltip="SAP Logo"/>
+                    <Title text="MyApp" wrapping="false" design="Bold"/>
+                    <ToolbarSpacer />
+                    <Avatar src="test-resources/sap/tnt/images/Woman_avatar_01.png" displaySize="XS" press=".onAvatarPressed" tooltip="Profile"/>
+                </tnt:ToolHeader>
+        </customHeader>
+        <IconTabHeader mode="Inline">
+		<items>
+			<IconTabFilter key="info" text="Info" />
+			<IconTabFilter key="attachments" text="Attachments" count="3" />
+			<IconTabFilter key="notes" text="Notes" count="12" />
+			<IconTabFilter key="people" text="People"/>
+		</items>
+	    </IconTabHeader>
         <content>
             <!-- VBox to arrange content vertically -->
-            <VBox class="sapUiResponsiveMargin">
-                
+            <VBox class="sapUiResponsiveMargin customTableWrapper ">
+                <VBox class="customTableBorder">
+                <Text class="customTableHeader" text="Employee Detail"/>
                 <!-- Employee ID Section -->
                 <HBox class="sapUiSmallMarginBottom">
                     <Label text="Employee Id" labelFor="empIdText" width="150px"/>
@@ -52,11 +69,11 @@
                     <Text id="temperatureText" text="{/selectedEmployee/temperature}" />
                 </HBox>
 
-            </VBox>
-
-            <!-- Back to Overview Button, centered with margin -->
-            <VBox class="sapUiSmallMarginTop" justifyContent="Center" alignItems="Center">
-                <Button text="Back to Overview" press=".onNavBack" />
+                </VBox>
+                <!-- Back to Overview Button, centered with margin -->
+                <HBox class="sapUiSmallMarginTop" justifyContent="Center" alignItems="Center">
+                    <Button text="Back to Overview" press=".onNavBack" type="Emphasized" width="190px"/>
+                </HBox>
             </VBox>
         </content>
     </Page>
